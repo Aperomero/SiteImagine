@@ -1,0 +1,27 @@
+<template name="mainLayout">
+    <head>
+        <title>Imagine Conseil</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <header class="col-md-12 jumbotron">
+                    <h1>Imagine Conseil</h1>
+                </header>
+            </div>
+            <div class="row">
+                <nav class="col-md-3">{{> menu}}</nav>
+                <section class="col-md-9 well">{{> yield}}</section>
+            </div>
+            <div class="row">
+                <footer>
+                    <div class="footer">
+                        <hr>
+                        <p>Développé par le superbe Victor Romero</p>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </body>
+</template>
