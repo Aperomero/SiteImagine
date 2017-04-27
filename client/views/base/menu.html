@@ -3,13 +3,12 @@
     <ul class="nav nav-pills nav-stacked">
         <li><a href="{{pathFor route='home'}}">Accueil</a></li>
     </ul>
-    <h3>Mon compte</h3>
-    <ul class="nav nav-pills nav-stacked">
-        {{#if currentUser}}
-            <li><a href="{{pathFor route='userHome'}}">Accueil Espace Membre</a></li>
-            <li><a class="logout">Déconnection</a></li>
-        {{else}}
-            <li><a href="{{pathFor route='login'}}">Connection</a></li>
+    {{#if currentUser}}
+        {{#if isInRole 'User'}}
+            <h3>Mon compte</h3>
+            <ul class="nav nav-pills nav-stacked">
+                <li><a href="{{pathFor route='userHome'}}">Accueil Espace Membre</a></li>
+            </ul>
         {{/if}}
-    </ul>
+    {{/if}}
 </template>
