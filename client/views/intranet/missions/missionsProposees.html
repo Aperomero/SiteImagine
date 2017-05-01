@@ -1,0 +1,9 @@
+<template name="missionsProposees">
+    <ul>
+        {{#each propositionMission}}
+            <li><h1>{{title}}</h1></li>
+            <button type="button" class="btn btn-danger" id="delete">Annuler</button>
+            <button type="button" class="btn btn-success">Valider la mission</button>
+        {{/each}} 
+    </ul>
+</template>
