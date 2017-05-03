@@ -1,9 +1,26 @@
 <template name="missionsProposees">
-    <ul>
-        {{#each propositionMission}}
-            <li><h1>{{title}}</h1></li>
-            <button type="button" class="btn btn-danger" id="delete">Annuler</button>
-            <button type="button" class="btn btn-success">Valider la mission</button>
-        {{/each}} 
-    </ul>
+    {{#if isInRole 'User'}}
+        {{#if isInRole 'Admin' 'DevCo'}}
+            <ul>
+                {{#each propositionMission}}
+                    <li>
+                        <h1>{{title}}</h1>
+                        <b>{{entreprise}}</b>
+                        <p>{{adresse}} {{codePostal}} {{ville}}</p>
+                        <p>
+                            <b>Contact</b> : {{nomContact}} <br />
+                            mail : {{mailContact}} <br />
+                            téléphone : {{telContact}}
+                        </p>
+                    </li>
+                    <button type="button" class="delete">Supprimer</button>
+                    <button type="button">Valider la mission</button>
+                {{/each}} 
+            </ul>
+        {{else}}
+            <h1>Vous n'avez le droit d'acceder à cette page</h1>
+        {{/if}}
+    {{else}}
+        <h1>Oups, vous n'avez pas accès à cette page</h1>
+    {{/if}}
 </template>
