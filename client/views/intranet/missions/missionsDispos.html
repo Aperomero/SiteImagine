@@ -1,0 +1,9 @@
+<template name="missionsDispos">
+    {{#if isInRole 'User'}}
+        <a href="{{pathFor route='propositionMission'}}"><button type="button" class="btn btn-primary">Proposer une nouvelle mission</button></a>
+        <h1>Liste des missions disponibles</h1>
+        <p>N'importe qui peut déposer une proposition de mission, qui doit être validé par un respo (président, respo DevCo ou vice-respo DevCo)</p>
+    {{else}}
+        <h1>Oups, vous n'avez pas accès à cette page ...</h1>
+    {{/if}}
+</template>
