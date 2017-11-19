@@ -9,6 +9,9 @@
             <ul class="nav nav-pills nav-stacked">
                 <li><a href="{{pathFor route='userHome'}}">Accueil Espace Membre</a></li>
                 <li><a href="{{pathFor route='missions'}}">Missions</a></li>
+                {{#if isInRole 'Admin' 'DevCo'}}
+                    <li><a href="{{pathFor route='usefulDevCo}}">Utiles DevCo</a></li>
+                {{/if}}
             </ul>
         {{/if}}
     {{/if}}
