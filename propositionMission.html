@@ -1,0 +1,7 @@
+<template name="propositionMission">
+    {{#if isInRole 'User'}}
+        {{> quickForm collection="PropositionMission" id="insertPropositionMissionForm" type="insert"}}
+    {{else}}
+        <h1>Vous n'avez pas accès à cette page</h1>
+    {{/if}}
+</template>

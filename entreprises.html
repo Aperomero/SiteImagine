@@ -1,0 +1,13 @@
+<template name="entreprises">
+    {{#if isInRole 'User' 'Admin' 'DevCo'}}
+        <ul>
+            {{#each entreprises}}
+                <li>
+                    <h1>{{nom}}</h1>
+                </li>
+            {{/each}} 
+            </ul>
+    {{else}}
+        <h1>Oups, vous n'avez pas accès à cette page</h1>
+    {{/if}}
+</template>

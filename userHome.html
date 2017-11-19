@@ -1,0 +1,8 @@
+<template name="userHome">
+    {{#if isInRole 'User'}}
+        <h1>Bienvenue sur l'intranet d'Imagine Conseil</h1>
+    {{else}}
+        <h1>Oups, vous n'êtes pas autorisé à acceder à cette page</h1>
+    {{/if}}
+    {{> loginButtons}}
+</template>

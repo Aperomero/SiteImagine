@@ -1,0 +1,9 @@
+<template name="usefulDevCo">
+    {{#if isInRole 'User' 'Admin' 'DevCo'}}
+        <ul class="nav nav-pills nav-stacked">
+            <li><a href="{{pathFor route='entreprises'}}">Liste des Entreprises</a></li> 
+        </ul>
+    {{else}}
+        <h1>Oups, vous n'avez pas accès à cette page ...</h1>
+    {{/if}}
+</template>
